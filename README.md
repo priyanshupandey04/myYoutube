@@ -1,6 +1,6 @@
 # 📺 YouTube UI – React + Vite + Tailwind + Redux
 
-This project is a **modern YouTube UI clone**, built with **React**, **Vite**, **Redux Toolkit**, and styled using **Tailwind CSS**.  It fetches live data using the **YouTube Data API v3**.
+This project is a **modern YouTube UI clone**, built with **React**, **Vite**, **Redux Toolkit**, and styled using **Tailwind CSS**. It fetches live data using the **YouTube Data API v3**.
 
 ---
 
@@ -88,7 +88,9 @@ const exampleSlice = createSlice({
   name: "example",
   initialState: { value: 0 },
   reducers: {
-    increment: (state) => { state.value++ },
+    increment: (state) => {
+      state.value++;
+    },
   },
 });
 
@@ -116,24 +118,38 @@ const Counter = () => {
 
 ---
 
-## 📸 Screenshots
+## ✅ Today's Progress on YouTube Clone Project
 
-> Add your screenshots in a `/screenshots` folder and update paths.
+🚀 **Key Features Implemented:**
 
-### 🏠 Homepage
+1. **🔁 React Routing for SPA**
 
-### 🎬 Video Listing
+   * Integrated `react-router-dom` to enable **Single Page Application** behavior.
+   * Ensured smooth transitions between components like Home, Watch Page, etc., without full page reloads.
+
+2. **📦 Redux State Management**
+
+   * Configured Redux using `@reduxjs/toolkit` to manage global states like sidebar toggle and search results.
+   * Structured slices for clean modular state logic.
+
+3. **💡 Debounced Search Suggestions (Live API)**
+
+   * Implemented **debouncing** (using `setTimeout`) to reduce redundant API calls while typing.
+   * Used **Google’s search suggestion API** for real-time feedback.
+
+4. **⚡ API Caching for Search Suggestions**
+
+   * Cached previously fetched suggestions using Redux (object/map), reducing network calls and improving UX.
+
+5. **🧵 Recursive Nested Comments (Reddit-style)**
+
+   * Built a **recursive component structure** for displaying deeply nested comment threads.
+   * Supports unlimited comment depth similar to Reddit.
 
 ---
 
-## 📦 Deployment (Optional)
-
-You can deploy this using:
-
-* [Vercel](https://vercel.com/)
-* [Netlify](https://netlify.com/)
-
-Just connect your GitHub repo and follow the instructions.
+🔨 **Tech Stack Used:**
+`React`, `Redux Toolkit`, `React Router`, `Tailwind CSS`, `JavaScript`, `Google Search Suggestion API`
 
 ---
 
