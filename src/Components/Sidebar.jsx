@@ -1,6 +1,7 @@
 import React from "react";
 import SidebarComponent from "./SidebarComponent";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isSideBarOpen = useSelector((store) => store.sidebar.isSideBarOpen);
@@ -13,7 +14,9 @@ const Sidebar = () => {
       <div className="border-b-2 border-gray-200 ">
         <ul className="text-base font-semibold">
           <li>
-            <SidebarComponent context={"Home"} icon={"🏠"} url={"/"} />
+          <Link to={"/"}>
+           <SidebarComponent context={"Home"} icon={"🏠"} url={"/"} />
+          </Link>
           </li>
           <li>
             <SidebarComponent context={"Shorts"} icon={"📺"} url={"/"} />

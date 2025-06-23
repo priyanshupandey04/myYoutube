@@ -1,11 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { enableMapSet } from 'immer';
 import NavSlice from "./NavSlice";
-// Importing the NavSlice reducer to be used in the store
-// This file sets up the Redux store for the application
+import SearchQuery from "./SearchQuery";
+enableMapSet();
 
 const store = configureStore({
   reducer: {
+    // anyName: SliceName, this anyName will be used during subscription to the slice
     sidebar: NavSlice,
+    search: SearchQuery,
   },
 });
 

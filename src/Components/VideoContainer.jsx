@@ -20,13 +20,14 @@ const VideoContainer = () => {
     <div className="flex flex-wrap">
       {videos.map((video, index) => {
         return (
-          <VideoCard
-            key={index}
-            title={video.snippet.localized.title}
-            channelName={video.snippet.channelTitle}
-            viewsCount={video.statistics.viewCount}
-            thumbnail={video.snippet.thumbnails.maxres}
-          />
+            <VideoCard
+              key={index}
+              title={video.snippet.localized.title}
+              channelName={video.snippet.channelTitle}
+              viewsCount={video.statistics.viewCount}
+              thumbnail={video.snippet.thumbnails.maxres.url ? video.snippet.thumbnails.maxres.url :video.snippet.thumbnails.medium.url}
+              videoId={video.id}
+            />
         );
       })}
     </div>

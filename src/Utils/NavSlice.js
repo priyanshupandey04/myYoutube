@@ -9,7 +9,10 @@ const NavSlice = createSlice({
     toggleSidebar: (state) => {
       state.isSideBarOpen = !state.isSideBarOpen;
     },
+    closeSidebar: (state) => {
+      state.isSideBarOpen = false;
+    },
   },
 });
-export const { toggleSidebar } = NavSlice.actions;
+export const { toggleSidebar, closeSidebar } = NavSlice.actions;
 export default NavSlice.reducer;
