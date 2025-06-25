@@ -15,7 +15,7 @@ const VideoContainer = () => {
     const videos = Array(2).fill(data.items).flat();
     setVideos(videos);
   };
-  if (!videos.length) return <div>Loading...</div>;
+  if (videos.length == 0) return <div>Loading...</div>;
   return (
     <div className="flex flex-wrap">
       {videos.map((video, index) => {
@@ -25,7 +25,7 @@ const VideoContainer = () => {
               title={video.snippet.localized.title}
               channelName={video.snippet.channelTitle}
               viewsCount={video.statistics.viewCount}
-              thumbnail={video.snippet.thumbnails.maxres.url ? video.snippet.thumbnails.maxres.url :video.snippet.thumbnails.medium.url}
+              thumbnail={video.snippet.thumbnails.medium.url}
               videoId={video.id}
             />
         );

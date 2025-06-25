@@ -9,15 +9,13 @@ const Head = () => {
   const [searchSuggestions, setSearchSuggestions] = useState([]);
 
   const queriesCachedRes = useSelector((store) => store.search.cacheRes);
-
-  console.log(queriesCachedRes);
   useEffect(() => {
   let timer = null;
 
   if (queriesCachedRes.has(searchQuery)) {
     setSearchSuggestions(queriesCachedRes.get(searchQuery));
   } else {
-    timer = setTimeout(() => getSearchSuggestions(), 200);
+    timer = setTimeout(() => getSearchSuggestions(), 80);
   }
 
   return () => clearTimeout(timer);

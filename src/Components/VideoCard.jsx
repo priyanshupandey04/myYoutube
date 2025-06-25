@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const VideoCard = ({ thumbnail, title, channelName, viewsCount, videoId }) => {
   return (
-    <div className="w-[32%] m-2 overflow-hidden bg-gray-200 border-2 border-gray-200 rounded-lg h-fit">
+    <div className="w-[32%] m-2 overflow-hidden  border-2 border-gray-100 rounded-lg h-fit">
       <Link to={`/watch?v=${videoId}`}>
         <div className="h-[70%] rounded-lg overflow-hidden h-fit">
           <img
